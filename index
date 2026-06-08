@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Luxury Railway Booking System</title>
+
+  <link rel="icon" type="image/png" href="logo.png">
+
+  <!-- GOOGLE FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- WATERMARK -->
+  <img src="logo.png" class="watermark">
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+
+    <div class="nav-left">
+      <img src="logo.png" class="logo">
+      <h2>Luxury Railway</h2>
+    </div>
+
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Trains</a>
+      <a href="#">Bookings</a>
+      <a href="#">Contact</a>
+    </div>
+
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Book Your Journey With Comfort 🚆</h1>
+    <p>Fast • Secure • Premium Experience</p>
+  </section>
+
+  <!-- DASHBOARD -->
+  <section class="dashboard">
+
+    <!-- TRAIN SECTION -->
+    <div class="card">
+
+      <h3>🚄 Available Trains</h3>
+
+      <div class="train-box">
+        <h4>Green Line Express</h4>
+        <p>Karachi → Lahore</p>
+        <p>Departure: 08:00 AM</p>
+        <p>Status: Available ✅</p>
+      </div>
+
+      <div class="train-box">
+        <h4>Royal Express</h4>
+        <p>Karachi → Islamabad</p>
+        <p>Departure: 05:00 PM</p>
+        <p>Status: Available ✅</p>
+      </div>
+
+      <div class="train-box">
+        <h4>Night Star</h4>
+        <p>Karachi → Multan</p>
+        <p>Departure: 11:00 PM</p>
+        <p>Status: Full ❌</p>
+      </div>
+
+    </div>
+
+    <!-- BOOKING SECTION -->
+    <div class="card booking-card">
+
+      <h3>🎫 Book Ticket</h3>
+
+      <input type="text" id="name" placeholder="Passenger Name">
+
+      <select id="train">
+        <option>Select Train</option>
+        <option>Green Line Express</option>
+        <option>Royal Express</option>
+        <option>Night Star</option>
+      </select>
+
+      <input type="text" id="from" placeholder="From">
+
+      <input type="text" id="to" placeholder="To">
+
+      <input type="date" id="date">
+
+      <!-- MEAL OPTION -->
+      <select id="meal">
+        <option value="0">No Meal</option>
+        <option value="500">Standard Meal (+500 PKR)</option>
+        <option value="1000">Premium Meal (+1000 PKR)</option>
+      </select>
+
+      <button onclick="bookTicket()">Book Now</button>
+
+    </div>
+
+  </section>
+
+  <!-- BOOKINGS TABLE -->
+  <section class="table-section">
+
+    <h2>Your Bookings</h2>
+
+    <table>
+
+      <thead>
+
+        <tr>
+          <th>Ticket ID</th>
+          <th>Name</th>
+          <th>Train</th>
+          <th>Route</th>
+          <th>Date</th>
+          <th>Meal</th>
+          <th>Total</th>
+          <th>Action</th>
+        </tr>
+
+      </thead>
+
+      <tbody id="ticketList"></tbody>
+
+    </table>
+
+  </section>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
